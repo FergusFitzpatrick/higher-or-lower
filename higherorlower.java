@@ -1,3 +1,8 @@
+/*
+* Author Fergus Fitzpatrick
+*
+* Date 15-11-16
+*/
 import java.util.Scanner;
 
 public class higherorlower {
@@ -6,12 +11,12 @@ public class higherorlower {
 		//game variables
 		boolean running = true;
 		int guess = 0;
-		int max = 10000;
+		int max = 100; //can do any number up to Integer.MAX_VALUE. For user experience. I think 100 is fine.
 		int min = 0;
 		int middle = (max+min)/2;
 		System.out.println();
 		System.out.println("	Higher or Lower");
-		System.out.println("Pick a number between 1 and 10,000");
+		System.out.println("Pick a number between 1 and "+ max);
 		System.out.println("Reply 'higher' or 'lower' or 'correct'");
 
 		GAME:
@@ -33,6 +38,10 @@ public class higherorlower {
 			else{
 				System.out.println("	**Invalid Input**");
 				continue GAME;
+			}
+			if ( max == min){
+				System.out.println(max+" must be your number!");
+				break;
 			}
 		}
 		System.out.println();
