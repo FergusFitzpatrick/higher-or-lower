@@ -15,7 +15,7 @@ public class higherorlower {
 		int min = 0;
 		int middle = (max+min)/2;
 		System.out.println();
-		System.out.println("	Higher or Lower");
+		System.out.println("\tHigher or Lower");
 		System.out.println("Pick a number between 1 and "+ max);
 		System.out.println("Reply 'higher' or 'lower' or 'correct'");
 
@@ -36,7 +36,7 @@ public class higherorlower {
 				break;
 			}
 			else{
-				System.out.println("	**Invalid Input**");
+				System.out.println("\t**Invalid Input**");
 				continue GAME;
 			}
 			if ( max == min){
@@ -44,10 +44,7 @@ public class higherorlower {
 				break;
 			}
 		}
-		System.out.println();
-		System.out.println("Your number is: "+guess);
-		System.out.println();
-		System.out.println("	GAME OVER");
-		System.out.println();
+		System.out.println("\nYour number is: "+guess);
+		System.out.println("\n\tGAME OVER");
 	}
 }
